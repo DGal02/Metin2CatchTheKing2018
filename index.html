@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="Shortcut icon" href="images/ikona.png">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Złap Króla</title>
+    <meta name="keywords" content="Metin2">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    </style>
+</head>
+<body>
+<div id="wholepage">
+    <div id="element">
+        <div id="element1">
+            <img class="img-fluid img-radius" src="images/stol.jpg">
+            <div id="restart">Restart<br>↓
+                <div id="popoverhide" class="loader center" data-toggle="popover" data-animation="true"
+                     data-content="Zrobione!" onclick="restart()"></div>
+                <button type="button" class="btn btn-success center" onclick="taktyka()">Taktyka</button>
+            </div>
+
+            <div id="wazne" class="container" style="margin-bottom:15px; margin-top: 15px">
+
+                <div class="row">
+                    <div class="dropdown">
+                        <img id="1" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(1, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(1, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(1, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="2" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(2, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(2, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(2, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="3" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(3, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(3, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(3, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="4" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(4, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(4, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(4, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="5" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(5, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(5, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(5, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <img id="6" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(6, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(6, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(6, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="7" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(7, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(7, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(7, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="8" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(8, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(8, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(8, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="9" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(9, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(9, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(9, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="10" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(10, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(10, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(10, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <img id="11" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(11, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(11, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(11, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="12" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(12, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(12, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(12, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="13" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(13, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(13, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(13, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="14" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(14, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(14, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(14, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="15" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(15, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(15, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(15, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <img id="16" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(16, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(16, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(16, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="17" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(17, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(17, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(17, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="18" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(18, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(18, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(18, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="19" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(19, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(19, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(19, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="20" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(20, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(20, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(20, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <img id="21" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(21, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(21, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(21, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="22" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(22, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(22, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(22, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="23" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(23, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(23, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(23, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="24" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(24, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(24, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(24, 'pole')">Zresetuj pole</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img id="25" src="images/pole.jpg" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" onclick="zmientlo(25, 1)">1</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 2)">2</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 3)">3</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 4)">4</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 5)">5</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 'uwaga')">Prawdopodobnie 5</span>
+                            <span class="dropdown-item" onclick="zmientlo(25, 'krol')">krol</span>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item" onclick="zmientlo(25, 'pole')">Zresetuj pole</span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="stopka">
+            <button type="button" class="btn btn-success"
+                    onclick="document.getElementById('id01').style.display='block'">Panel
+            </button>
+        </div>
+        <div id="ile">
+            <h1 class="inlinedis">x7</h1><img class="inlinedis" src="images/1.jpg">
+            <h1 class="inlinedis">x4</h1><img class="inlinedis" src="images/2.jpg">
+            <h1 class="inlinedis">x5</h1><img class="inlinedis" src="images/3.jpg">
+            <h1 class="inlinedis">x5</h1><img class="inlinedis" src="images/4.jpg">
+            <h1 class="inlinedis">x3</h1><img class="inlinedis" src="images/5.jpg">
+            <div><h1 class="inlinedis">x1</h1><img class="inlinedis" src="images/krol.jpg"></div>
+        </div>
+        <div class="a"></div>
+
+    </div>
+</div>
+<div id="id01" class="modal">
+    <div class="modal-content animate">
+        <a href="http://pomocnikokey.cba.pl/" target="blank">
+            <img src="images/okey.jpg" class="img-fluid">
+            <h1 class="centert">Obczaj stronę do kart OKEY!<img class="okeycard" src="images/okey.png"></h1>
+
+        </a>
+    </div>
+</div>
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+</body>
+</html>
